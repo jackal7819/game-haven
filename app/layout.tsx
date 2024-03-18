@@ -2,10 +2,23 @@ import './globals.css';
 
 import Footer from '@/components/Layout/Footer';
 import Header from '@/components/Layout/Header';
-import { Inter } from 'next/font/google';
+import { Orbitron, Montserrat } from 'next/font/google';
 import type { Metadata } from 'next';
 
-const inter = Inter({ subsets: ['latin'] });
+
+const orbitron = Orbitron({
+  variable: '--font-orbitron',
+  weight: ["400", "500", "700"],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const montserrat = Montserrat({
+  variable: '--font-montserrat',
+  weight: ["400", "500", "700"],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
 	title: 'Game Haven',
@@ -18,8 +31,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
-			<body className={`${inter.className} bg-gradient-to-br from-[#1f1559] via-[#030035] to-[#1f1559] min-h-screen text-blue-50`}>
+		<html lang='en' className={`${orbitron.variable} ${montserrat.variable}`}>
+			<body className={`${montserrat.className} bg-linear-dark-blue min-h-screen text-light`}>
 				<Header />
 				<main>{children}</main>
 				<Footer />
