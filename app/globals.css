@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 @layer components {
-  .container {
-    @apply mx-auto max-w-[328px] md:max-w-[688px] lg:max-w-[864px] xl:max-w-[1080px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] 4xl:max-w-[1600px]
-  }
+	.container {
+		@apply mx-auto max-w-[328px] md:max-w-[688px] lg:max-w-[864px] xl:max-w-[1080px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] 4xl:max-w-[1600px];
+	}
+}
+.profile {
+	margin-left: calc((100% - 328px) / 2);
+	width: calc(((100% - 328px) / 2) + 328px);
+	scrollbar-width: auto;
+	scrollbar-color: #00B8FF #F1FBFF;
 }
