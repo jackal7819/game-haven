@@ -35,9 +35,14 @@ const CardGame: React.FC<CardGameProps> = ({ game }) => {
 					<div className='flex gap-1'>
 						{Array.from({ length: 5 }, (_, i) =>
 							game.rating > i ? (
-								<FaStar size={19} className='fill-[#DB5B32]' />
+								<FaStar
+									key={i}
+									size={19}
+									className='fill-[#DB5B32]'
+								/>
 							) : (
 								<FaRegStar
+									key={i}
 									size={19}
 									className='fill-[#DB5B32]'
 								/>
