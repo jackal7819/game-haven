@@ -19,7 +19,7 @@ const NewReleases = () => {
 					<GoChevronRight size={24} className='mt-[3px] text-blue group-hover:text-light-blue' />
 				</Link>
 			</div>
-			<div className='grid grid-cols-3 gap-7'>
+			<div className='grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 4xl:gap-7 xl:gap-5 2xl:gap-6'>
 				{games.map((game) => (
 					<CardGame key={game.id} game={game} />
 				))}

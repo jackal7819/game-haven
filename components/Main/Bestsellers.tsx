@@ -8,7 +8,9 @@ const Bestsellers = () => {
 	return (
 		<div className='container mb-20'>
 			<div className='flex items-center justify-between gap-5 mb-14'>
-				<h2 className='text-[40px] font-medium font-orbitron'>Bestsellers</h2>
+				<h2 className='text-[40px] font-medium font-orbitron'>
+					Bestsellers
+				</h2>
 				<Link
 					href='/'
 					className='flex items-center justify-center gap-2 px-4 py-4 text-transparent duration-300 border rounded-lg border-b-light-blue w-44 h-14 border-r-blue border-t-blue border-l-light-blue hover:border-r-light-blue hover:border-b-blue hover:border-l-blue hover:border-t-light-blue group'
@@ -16,10 +18,13 @@ const Bestsellers = () => {
 					<span className='text-xl bg-gradient-to-r from-blue to-light-blue bg-clip-text group-hover:bg-gradient-to-l'>
 						See more
 					</span>
-					<GoChevronRight size={24} className='mt-[3px] text-blue group-hover:text-light-blue' />
+					<GoChevronRight
+						size={24}
+						className='mt-[3px] text-blue group-hover:text-light-blue'
+					/>
 				</Link>
 			</div>
-			<div className='grid grid-cols-3 gap-7'>
+			<div className='grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 4xl:gap-7 xl:gap-5 2xl:gap-6'>
 				{games.map((game) => (
 					<CardGame key={game.id} game={game} />
 				))}
