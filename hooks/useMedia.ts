@@ -8,7 +8,7 @@ export const useMedia = () => {
     query: '(min-width: 1440px)',
   });
   const isDesktop = useMediaQuery({
-    query: '(min-width: 1290px) and (max-width: 1439px)',
+    query: '(min-width: 1280px) and (max-width: 1439px)',
   });
   const isLaptop = useMediaQuery({
     query: '(min-width: 1024px) and (max-width: 1279px)',

@@ -35,6 +35,9 @@ const config: Config = {
 				light: '#f1fbff',
 				orange: '#db5b32',
 			},
+      backdropBlur: {
+        "4px": '4px',
+      },
 			fontFamily: {
 				orbitron: 'var(--font-orbitron)',
 				montserrat: 'var(--font-montserrat)',
