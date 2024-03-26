@@ -12,7 +12,7 @@ interface IconItemProps {
 
 const IconItem: React.FC<IconItemProps> = ({ item }) => {
   return (
-    <div className="flex flex-col items-center py-[20px] flex-[1_1_33.333%] text-center">
+    <div className="flex flex-col items-center py-5 flex-[1_1_33.333%] text-center">
       <Image
         src={item.image}
         alt={item.title}
@@ -20,10 +20,10 @@ const IconItem: React.FC<IconItemProps> = ({ item }) => {
         height={124}
         className="mb-3"
       />
-      <h3 className="text-2xl max-lg:text-xl leading-6 max-lg:leading-5 font-medium  mb-3">
+      <h3 className="text-xl xl:text-2xl leading-5 xl:leading-6 font-medium mb-3">
         {item.title}
       </h3>
-      <p className="text-xl max-lg:text-base leading-6 max-lg:leading-5 font-normal">
+      <p className="xl:text-xl leading-5 xl:leading-6">
         {item.subtitle}
       </p>
     </div>
