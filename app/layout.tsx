@@ -1,13 +1,20 @@
 import './globals.css';
 
-import Footer from '@/components/Layout/Footer';
+import Footer from '@/components/Layout/Footer/Footer';
 import Header from '@/components/Layout/Header/Header';
-import { Orbitron, Montserrat } from 'next/font/google';
+import {Orbitron, Montserrat, Roboto} from 'next/font/google';
 import type { Metadata } from 'next';
 
 
 const orbitron = Orbitron({
   variable: '--font-orbitron',
+  weight: ["400", "500", "700"],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const roboto = Roboto({
+  variable: '--font-roboto',
   weight: ["400", "500", "700"],
   subsets: ['latin'],
   display: 'swap',
@@ -31,7 +38,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en' className={`${orbitron.variable} ${montserrat.variable}`}>
+		<html lang='en' className={`${orbitron.variable} ${roboto.variable} ${montserrat.variable}`}>
 			<body className={`${montserrat.className} bg-linear-dark-blue min-h-screen text-light`}>
 				<Header />
 				<main>{children}</main>
