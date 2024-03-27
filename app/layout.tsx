@@ -1,7 +1,7 @@
 import './globals.css';
 
 import Footer from '@/components/Layout/Footer';
-import Header from '@/components/Layout/Header';
+import Header from '@/components/Layout/Header/Header';
 import { Orbitron, Montserrat } from 'next/font/google';
 import type { Metadata } from 'next';
 
