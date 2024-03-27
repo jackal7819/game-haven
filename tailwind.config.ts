@@ -41,6 +41,7 @@ const config: Config = {
 			fontFamily: {
 				orbitron: 'var(--font-orbitron)',
 				montserrat: 'var(--font-montserrat)',
+        roboto: 'var(--font-roboto)',
 			},
 		},
 	},

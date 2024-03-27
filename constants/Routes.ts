@@ -4,6 +4,24 @@ export const ROUTES = {
   support: "/support",
   basket: "/basket",
   favorites: "/favorites",
+  footerLinks: {
+    catalogues: [
+      {path: "/", name: "PC"},
+      {path: "/", name: "Play Station"},
+      {path: "/", name: "XBox"},
+      {path: "/", name: "Nintendo"},
+      {path: "/", name: "Giftcards"},
+
+    ],
+    resources: [
+      {path: "/", name: "Term of Use"},
+      {path: "/", name: "Privacy Policy"},
+      {path: "/", name: "Support 24/7"},
+      {path: "/", name: "FAQ"},
+      {path: "/", name: "News"},
+    ]
+  },
+
   platform: {
     pc: [
       { path: "/", name: "Steam", logo: "/items/steam.svg"},
