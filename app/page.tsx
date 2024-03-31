@@ -9,13 +9,13 @@ import Trending from '@/components/Main/Trending'
 const Home = () => {
 	return (
 		<>
-			{/*<HeroMain />*/}
-			{/*<NewReleases />*/}
-      {/*<Links />*/}
-      {/*<Trending />*/}
-      {/*<Icons />*/}
-      {/*<Bestsellers />*/}
-      {/*<Reviews />*/}
+			<HeroMain />
+			<NewReleases />
+      <Links />
+      <Trending />
+      <Icons />
+      <Bestsellers />
+      <Reviews />
 		</>
 	);
 };

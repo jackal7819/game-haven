@@ -6,7 +6,7 @@ import DesktopHeader from "@/components/Layout/Header/components/DesktopHeader";
 
 const Header = () => {
   return (
-    <header className="sticky h-[72px] xl:h-[97px]">
+    <header className="sticky h-[72px] xl:h-[97px] z-50">
       <MobileHeader/>
       <DesktopHeader/>
     </header>
