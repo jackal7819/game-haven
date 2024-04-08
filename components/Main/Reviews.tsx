@@ -32,7 +32,7 @@ const Reviews = () => {
         <h2 className="xl:text-[40px] text-[32px] font-medium font-orbitron">
           Reviews
         </h2>
-        {/* DESKTOP LINK */}{" "}
+        {/* DESKTOP LINK */}
         <Link
           href="/"
           className="items-center justify-center hidden gap-2 px-4 py-4 text-transparent duration-300 border rounded-lg md:flex border-b-light-blue w-44 h-14 border-r-blue border-t-blue border-l-light-blue hover:border-r-light-blue hover:border-b-blue hover:border-l-blue hover:border-t-light-blue group"
@@ -43,15 +43,14 @@ const Reviews = () => {
           <GoChevronRight
             size={24}
             className="mt-[3px] text-blue group-hover:text-light-blue"
-          />{" "}
-        </Link>{" "}
-        {/* MOBILE LINK */}{" "}
+          />
+        </Link>
+        {/* MOBILE LINK */}
         <Link href="/" className="md:hidden">
-          {" "}
           <GoChevronRight
             size={24}
             className="mt-[3px] text-blue hover:text-light-blue"
-          />{" "}
+          />
         </Link>
       </div>
       <div className="relative swiperMobile">
@@ -91,8 +90,7 @@ const Reviews = () => {
           {reviewsData.map((item) => {
             return (
               <SwiperSlide key={item.id} className=" !h-auto !flex !flex-col">
-                {" "}
-                <ReviewItem item={item} />{" "}
+                <ReviewItem item={item} />
               </SwiperSlide>
             );
           })}
