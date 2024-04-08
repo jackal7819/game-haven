@@ -31,8 +31,9 @@ const config: Config = {
 			colors: {
 				'dark-blue': '#050021',
 				'light-blue': '#00b8ff',
-				blue: '#0166FB',
+				'light-gray': '#7D809F',
 				light: '#f1fbff',
+				blue: '#0166FB',
 				orange: '#db5b32',
 			},
       backdropBlur: {

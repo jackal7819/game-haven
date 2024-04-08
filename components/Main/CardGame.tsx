@@ -17,7 +17,7 @@ interface CardGameProps {
 
 const CardGame: React.FC<CardGameProps> = ({ game }) => {
 	return (
-		<div className='xl:max-w-[514px] 3xl:h-[393px] flex flex-col gap-2 hover:shadow-lg md:hover:shadow-dark-blue rounded-xl duration-300 md:hover:-translate-y-3 cursor-pointer carousel-item max-w-[242px] relative md:max-w-[336px] lg:max-w-[424px] '>
+		<div className='xl:max-w-[514px] 3xl:h-[393px] flex flex-col gap-2 hover:shadow-xl md:hover:shadow-[0_4px_32px_0_#d3e2ff4c] rounded-xl duration-500 md:hover:-translate-y-3 cursor-pointer carousel-item max-w-[242px] relative md:max-w-[336px] lg:max-w-[424px]'>
 			<div className='flex-1 rounded-xl'>
 				<Image
 					className='object-cover h-[242px] rounded-xl md:h-[218px]3xl:h-[261px]'

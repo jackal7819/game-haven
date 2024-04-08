@@ -8,7 +8,7 @@ import Trending from '@/components/Main/Trending'
 
 const Home = () => {
 	return (
-		<>
+		<div className='m-auto'>
 			<HeroMain />
 			<NewReleases />
       <Links />
@@ -16,7 +16,7 @@ const Home = () => {
       <Icons />
       <Bestsellers />
       <Reviews />
-		</>
+		</div>
 	);
 };
 
