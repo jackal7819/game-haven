@@ -6,6 +6,7 @@ export const games = [
 		price: '50,00',
 		rating: 5,
 		image: '/punk.jpg',
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus. . Maecenas quis ligula eu ante egestas dapibus."
 	},
 	{
 		id: 2,
@@ -14,7 +15,9 @@ export const games = [
 		price: '55,00',
 		rating: 4,
 		image: '/tekken.jpg',
-	},
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus."
+
+  },
 	{
 		id: 3,
 		title: 'Last Epoch',
@@ -22,7 +25,9 @@ export const games = [
 		price: '45,00',
 		rating: 5,
 		image: '/epoch.jpg',
-	},
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus."
+
+  },
 	{
 		id: 4,
 		title: 'Elden Ring',
@@ -30,7 +35,9 @@ export const games = [
 		price: '35,00',
 		rating: 3,
 		image: '/elden.jpg',
-	},
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus."
+
+  },
 	{
 		id: 5,
 		title: 'Red Dead Redemption 2',
@@ -38,7 +45,9 @@ export const games = [
 		price: '29,00',
 		rating: 4,
 		image: '/rdr.jpg',
-	},
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus."
+
+  },
 	{
 		id: 6,
 		title: 'Grand Theft Auto V: Premium Online Edition',
@@ -46,5 +55,7 @@ export const games = [
 		price: '60,00',
 		rating: 5,
 		image: '/gta.jpg',
-	},
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus."
+
+  },
 ];

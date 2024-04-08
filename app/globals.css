@@ -14,6 +14,55 @@
 	scrollbar-color: #00b8ff #f1fbff;
 }
 
+.heroCard {
+  min-height: calc(100vh - 73px);
+
+  @media screen and (min-width: 766px) {
+    min-height: 470px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    min-height: 100%;
+  }
+}
+
+.swiper-pagination{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:24px!important;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+.swiper-pagination-horizontal{
+  --swiper-pagination-bottom: 40px;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-width: 36px;
+  --swiper-pagination-bullet-size: 36px;
+  --swiper-pagination-bullet-height: 36px;
+  --swiper-pagination-bullet-horizontal-gap: 15px;
+  opacity: 1!important;
+  color: rgb(219, 91, 50)!important;
+  background-color: transparent!important;
+  border: 0.5px solid rgb(219, 91, 50);
+  border-radius: 24px!important;
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+
+  margin: 0!important;
+
+}
+
+.swiper-pagination-bullet-active {
+  background: rgb(219, 91, 50) !important;
+  color: rgb(241, 251, 255) !important;
+}
+
 .swiperMobile {
 	@media (max-width: 767.98px) {
 		margin-left: calc((100% - 328px) / 2);

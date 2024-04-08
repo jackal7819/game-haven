@@ -18,6 +18,9 @@ const config: Config = {
 			'4xl': '1920px',
 		},
 		extend: {
+      boxShadow: {
+        heroButton: '1px 4px 64px 0px rgb(6 182 212 / 0.5)',
+      },
 			backgroundImage: {
 				'linear-dark-blue':
 					'linear-gradient(184.2deg, #1F1559 -0.46%, #030035 42.77%, #1F1559 84.31%)',
