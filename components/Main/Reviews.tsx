@@ -90,7 +90,7 @@ const Reviews = () => {
         >
           {reviewsData.map((item) => {
             return (
-              <SwiperSlide key={item.id} className=" self-stretch">
+              <SwiperSlide key={item.id} className=" !h-auto !flex !flex-col">
                 {" "}
                 <ReviewItem item={item} />{" "}
               </SwiperSlide>
