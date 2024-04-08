@@ -25,7 +25,8 @@ const Reviews = () => {
 
   const btnStyles =
     "rounded-[32px] p-3 w-14 h-14 bg-orange disabled:border disabled:border-orange disabled:bg-transparent disabled:text-orange";
-
+  const btnInnerStyles =
+    "w-[100%] h-[100%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-[32px] bg-linear-orange opacity-0 group-hover:group-enabled:opacity-100 duration-300";
   return (
     <div className="md:container mb-40">
       <div className="max-md:container flex justify-between items-center mb-14">
@@ -97,15 +98,17 @@ const Reviews = () => {
         </Swiper>
         <button
           ref={navPrevRef}
-          className={`${btnStyles} hidden lg:block absolute top-1/2 -left-2 2xl:-left-4 3xl:-left-14 transform -translate-x-full -translate-y-1/2 z-20`}
+          className={`${btnStyles} group hidden lg:block absolute top-1/2 -left-2 2xl:-left-4 3xl:-left-14 transform -translate-x-full -translate-y-1/2 z-20`}
         >
-          &#60;
+          <div className={`${btnInnerStyles}`}></div>
+          <div className="relative z-20">&#60;</div>
         </button>
         <button
           ref={navNextRef}
-          className={`${btnStyles} hidden lg:block absolute top-1/2 -right-2 2xl:-right-4 3xl:-right-14 transform translate-x-full -translate-y-1/2 z-20`}
+          className={`${btnStyles} group absolute hidden lg:block top-1/2 -right-2 2xl:-right-4 3xl:-right-14 transform translate-x-full -translate-y-1/2  z-20`}
         >
-          &#62;
+          <div className={`${btnInnerStyles}`}></div>
+          <div className="relative z-20">&#62;</div>
         </button>
       </div>
       <div
