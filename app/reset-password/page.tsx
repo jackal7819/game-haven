@@ -14,20 +14,18 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { useState } from 'react';
 
 type Inputs = {
-	name: string;
-	nameRequired: string;
 	email: string;
 	emailRequired: string;
 	password: string;
 	passwordRequired: string;
 };
 
-const Register: React.FC = () => {
-	const [agreeWithTerms, setAgreeWithTerms] = useState(false);
+const ResetPassword: React.FC = () => {
+	const [rememberMe, setRememberMe] = useState(false);
 	const [passwordVisible, setPasswordVisible] = useState(false);
 
 	const handleCheckboxChange = () => {
-		setAgreeWithTerms(!agreeWithTerms);
+		setRememberMe(!rememberMe);
 	};
 
 	const togglePasswordVisibility = () => {
@@ -46,7 +44,7 @@ const Register: React.FC = () => {
 			<div className='flex flex-col gap-14 w-[640px]'>
 				<div className='flex flex-col gap-8'>
 					<h1 className='xl:text-5xl text-[32px] font-bold font-orbitron text-center'>
-						Create account
+					Reset Password
 					</h1>
 					<div className='flex items-center justify-between gap-6'>
 						<BsFacebook
@@ -72,29 +70,6 @@ const Register: React.FC = () => {
 					onSubmit={handleSubmit(onSubmit)}
 					className='flex flex-col gap-3'
 				>
-					<div className='flex flex-col gap-3'>
-						<label htmlFor='name'>Your name</label>
-						<input
-							className='p-2 font-medium duration-500 border-4 rounded-lg outline-none bg-light text-light-gray border-light focus:border-blue'
-							placeholder='Enter your name'
-							type='text'
-							{...register('name', {
-								required: 'Name is required',
-								minLength: {
-									value: 4,
-									message:
-										'Name must be at least 4 characters',
-								},
-							})}
-						/>
-						<div className='h-5'>
-							{errors.name && (
-								<span className='text-red-500'>
-									{errors.name.message}
-								</span>
-							)}
-						</div>
-					</div>
 					<label htmlFor='email'>Email</label>
 					<input
 						className='p-2 font-medium duration-500 border-4 rounded-lg outline-none bg-light text-light-gray border-light focus:border-blue'
@@ -143,7 +118,7 @@ const Register: React.FC = () => {
 						</button>
 						<div className='h-5'>
 							{errors.password && (
-								<span className='text-red-500'>
+								<span className='text-red-500 '>
 									{errors.password.message}
 								</span>
 							)}
@@ -154,41 +129,30 @@ const Register: React.FC = () => {
 							className='flex items-center justify-center duration-500 border border-white rounded-sm cursor-pointer size-5'
 							onClick={handleCheckboxChange}
 						>
-							{agreeWithTerms && (
+							{rememberMe && (
 								<BsCheck size={24} className='text-light' />
 							)}
 						</div>
-						<span className='text-light'>
-							I agree with{' '}
-							<a
-								href='/'
-								target='_blank'
-								className='duration-500 text-light-blue hover:text-blue'
-							>
-								Terms
-							</a>{' '}
-							and{' '}
-							<a
-								href='/'
-								target='_blank'
-								className='duration-500 text-light-blue hover:text-blue'
-							>
-								Privacy policy
-							</a>
-						</span>
+						<span className='text-light'>Remember me</span>
 					</div>
-					<div className='flex items-center justify-between mt-9'>
-						<button
-							type='submit'
-							className='p-4 text-2xl duration-500 rounded-2xl bg-orange text-light hover:opacity-80 active:opacity-60 w-[296px]'
-						>
-							Log in
-						</button>
+					<button
+						type='submit'
+						className='p-4 text-2xl duration-500 rounded-2xl bg-orange text-light mt-9 hover:opacity-80 active:opacity-60'
+					>
+						Log in
+					</button>
+					<div className='flex justify-between mt-2'>
 						<Link
-							href='/login'
+							href='/register'
 							className='px-6 text-xl duration-500 text-light hover:text-orange'
 						>
-							Already have account
+							No account yet?
+						</Link>
+						<Link
+							href='/reset-password'
+							className='px-6 text-xl duration-500 text-light hover:text-orange'
+						>
+							Forgot password
 						</Link>
 					</div>
 				</form>
@@ -197,4 +161,4 @@ const Register: React.FC = () => {
 	);
 };
 
-export default Register;
+export default ResetPassword;
