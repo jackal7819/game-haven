@@ -1,17 +1,6 @@
 'use client';
 
-import Link from 'next/link';
-import {
-	BsApple,
-	BsCheck,
-	BsDiscord,
-	BsFacebook,
-	BsFillEyeFill,
-	BsFillEyeSlashFill,
-	BsGoogle,
-} from 'react-icons/bs';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { useState } from 'react';
 
 type Inputs = {
 	email: string;
@@ -21,17 +10,6 @@ type Inputs = {
 };
 
 const ResetPassword: React.FC = () => {
-	const [rememberMe, setRememberMe] = useState(false);
-	const [passwordVisible, setPasswordVisible] = useState(false);
-
-	const handleCheckboxChange = () => {
-		setRememberMe(!rememberMe);
-	};
-
-	const togglePasswordVisibility = () => {
-		setPasswordVisible(!passwordVisible);
-	};
-
 	const {
 		register,
 		handleSubmit,
