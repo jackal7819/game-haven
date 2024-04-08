@@ -40,7 +40,7 @@ export default function RootLayout({
 		<html lang='en' className={`${orbitron.variable} ${roboto.variable} ${montserrat.variable}`}>
 			<body className={`${montserrat.className} bg-linear-dark-blue min-h-screen text-light flex flex-col`}>
 				<Header />
-				<main className='flex flex-1'>{children}</main>
+				<main>{children}</main>
 				<Footer />
 			</body>
 		</html>

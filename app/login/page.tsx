@@ -40,29 +40,17 @@ const Login: React.FC = () => {
 	const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
 	return (
-		<div className='p-40 m-auto'>
+		<div className='flex items-center justify-center px-4 py-24 md:p-24 lg:p-30 2xl:p-40'>
 			<div className='flex flex-col gap-14 w-[640px]'>
 				<div className='flex flex-col gap-8'>
 					<h1 className='xl:text-5xl text-[32px] font-bold font-orbitron text-center'>
 						Log in
 					</h1>
 					<div className='flex items-center justify-between gap-6'>
-						<BsFacebook
-							size={56}
-							className='duration-500 cursor-pointer hover:text-orange'
-						/>
-						<BsDiscord
-							size={56}
-							className='duration-500 cursor-pointer hover:text-orange'
-						/>
-						<BsGoogle
-							size={56}
-							className='duration-500 cursor-pointer hover:text-orange'
-						/>
-						<BsApple
-							size={56}
-							className='duration-500 cursor-pointer hover:text-orange'
-						/>
+						<BsFacebook className='duration-500 cursor-pointer hover:text-orange md:size-14 size-12' />
+						<BsDiscord className='duration-500 cursor-pointer hover:text-orange md:size-14 size-12' />
+						<BsGoogle className='duration-500 cursor-pointer hover:text-orange md:size-14 size-12' />
+						<BsApple className='duration-500 cursor-pointer hover:text-orange md:size-14 size-12' />
 					</div>
 					<p className='text-[32px] font-medium text-center'>or</p>
 				</div>
@@ -141,16 +129,16 @@ const Login: React.FC = () => {
 					>
 						Log in
 					</button>
-					<div className='flex justify-between mt-2'>
+					<div className='flex flex-col items-center justify-between gap-3 mt-2 md:flex-row'>
 						<Link
 							href='/register'
-							className='px-6 text-xl duration-500 text-light hover:text-orange'
+							className='px-6 py-2 text-xl duration-500 text-light hover:text-orange'
 						>
 							No account yet?
 						</Link>
 						<Link
 							href='/reset-password'
-							className='px-6 text-xl duration-500 text-light hover:text-orange'
+							className='px-6 py-2 text-xl duration-500 text-light hover:text-orange'
 						>
 							Forgot password
 						</Link>

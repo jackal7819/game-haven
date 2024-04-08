@@ -18,7 +18,7 @@ const ResetPassword: React.FC = () => {
 	const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
 	return (
-		<div className='p-40 m-auto'>
+		<div className='flex items-center justify-center px-4 py-24 md:p-24 lg:p-30 2xl:p-40'>
 			<div className='flex flex-col gap-14 w-[640px]'>
 				<h1 className='xl:text-5xl text-[32px] font-bold font-orbitron text-center'>
 					Reset Password
