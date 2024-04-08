@@ -35,7 +35,6 @@
   font-weight: 400;
   line-height: 100%;
   letter-spacing: 0;
-
 }
 .swiper-pagination-horizontal{
   --swiper-pagination-bottom: 40px;
@@ -62,4 +61,10 @@
 .swiper-pagination-bullet-active {
   background: rgb(219, 91, 50) !important;
   color: rgb(241, 251, 255) !important;
+
+.swiperMobile {
+	@media (max-width: 767.98px) {
+		margin-left: calc((100% - 328px) / 2);
+		width: calc(((100% - 328px) / 2) + 328px);
+	}
 }
