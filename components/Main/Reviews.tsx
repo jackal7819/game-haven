@@ -18,7 +18,6 @@ import "swiper/css/scrollbar";
 register();
 
 const Reviews = () => {
-  const deviceType = useMedia();
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
   const scrollbarRef = useRef(null);
