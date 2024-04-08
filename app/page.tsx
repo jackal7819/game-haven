@@ -1,5 +1,5 @@
 import Bestsellers from '@/components/Main/Bestsellers'
-import HeroMain from '@/components/Main/HeroMain';
+import HeroMain from '@/components/Main/Hero/HeroMain';
 import Icons from '@/components/Main/Icons'
 import Links from '@/components/Main/Links'
 import NewReleases from '@/components/Main/NewReleases';
