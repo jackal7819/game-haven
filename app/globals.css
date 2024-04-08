@@ -61,6 +61,7 @@
 .swiper-pagination-bullet-active {
   background: rgb(219, 91, 50) !important;
   color: rgb(241, 251, 255) !important;
+}
 
 .swiperMobile {
 	@media (max-width: 767.98px) {
