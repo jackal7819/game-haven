@@ -18,6 +18,7 @@ import "swiper/css/scrollbar";
 register();
 
 const Reviews = () => {
+  const { deviceType } = useMedia();
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
   const scrollbarRef = useRef(null);
@@ -59,7 +60,7 @@ const Reviews = () => {
           className="mb-12 "
           modules={[Scrollbar, Navigation]}
           spaceBetween={32}
-          slidesPerView={window.innerWidth < 768 ? 1.5 : 2}
+          slidesPerView={2}
           navigation={{
             prevEl: navPrevRef.current,
             nextEl: navNextRef.current,
@@ -73,16 +74,18 @@ const Reviews = () => {
             console.log(swiper);
           }}
           onResize={(swiper) => {
-            swiper.allowTouchMove = window.innerWidth < 1024;
-            swiper.params.slidesPerView = window.innerWidth < 768 ? 1.5 : 2;
+            swiper.allowTouchMove = deviceType === "md" || deviceType === "sm";
+            swiper.params.slidesPerView = deviceType === "sm" ? 1.5 : 2;
           }}
-          allowTouchMove={window.innerWidth < 1024}
+          allowTouchMove={false}
           onBeforeInit={(swiper) => {
             const navigation = swiper.params.navigation as NavigationOptions;
             const scrollbar = swiper.params.scrollbar as ScrollbarOptions;
             navigation.prevEl = navPrevRef.current;
             navigation.nextEl = navNextRef.current;
             scrollbar.el = scrollbarRef.current;
+            swiper.allowTouchMove = deviceType === "md" || deviceType === "sm";
+            swiper.params.slidesPerView = deviceType === "sm" ? 1.5 : 2;
           }}
         >
           {reviewsData.map((item) => {
