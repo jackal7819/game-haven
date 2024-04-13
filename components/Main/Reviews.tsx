@@ -74,8 +74,9 @@ const Reviews = () => {
             console.log(swiper);
           }}
           onResize={(swiper) => {
+            swiper.params.spaceBetween = ['xl', '2xl', '3xl', '4xl'].includes(deviceType) ? 32 : 16
             swiper.allowTouchMove = deviceType === "md" || deviceType === "sm";
-            swiper.params.slidesPerView = deviceType === "sm" ? 1.5 : 2;
+            swiper.params.slidesPerView = deviceType === "sm" ? 1.4 : 2;
           }}
           allowTouchMove={false}
           onBeforeInit={(swiper) => {
@@ -84,8 +85,9 @@ const Reviews = () => {
             navigation.prevEl = navPrevRef.current;
             navigation.nextEl = navNextRef.current;
             scrollbar.el = scrollbarRef.current;
+            swiper.params.spaceBetween = ['xl', '2xl', '3xl', '4xl'].includes(deviceType) ? 32 : 16
             swiper.allowTouchMove = deviceType === "md" || deviceType === "sm";
-            swiper.params.slidesPerView = deviceType === "sm" ? 1.5 : 2;
+            swiper.params.slidesPerView = deviceType === "sm" ? 1.4 : 2;
           }}
         >
           {reviewsData.map((item) => {
