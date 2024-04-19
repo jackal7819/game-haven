@@ -28,8 +28,8 @@ const Reviews = () => {
   const btnInnerStyles =
     "w-[100%] h-[100%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-[32px] bg-linear-orange opacity-0 group-hover:group-enabled:opacity-100 duration-300";
   return (
-    <div className="md:container mb-40">
-      <div className="max-md:container flex justify-between items-center mb-14">
+    <div className="container mb-40">
+      <div className="flex justify-between items-center mb-14">
         <h2 className="xl:text-[40px] text-[32px] font-medium font-orbitron">
           Reviews
         </h2>
@@ -54,7 +54,7 @@ const Reviews = () => {
           />
         </Link>
       </div>
-      <div className="relative swiperMobile">
+      <div className="relative">
         <Swiper
           observer={true}
           className="mb-12 "
@@ -76,7 +76,7 @@ const Reviews = () => {
           onResize={(swiper) => {
             swiper.params.spaceBetween = ['xl', '2xl', '3xl', '4xl'].includes(deviceType) ? 32 : 16
             swiper.allowTouchMove = deviceType === "md" || deviceType === "sm";
-            swiper.params.slidesPerView = deviceType === "sm" ? 1.4 : 2;
+            swiper.params.slidesPerView = deviceType === "sm" ? 1 : 3;
           }}
           allowTouchMove={false}
           onBeforeInit={(swiper) => {
@@ -87,7 +87,7 @@ const Reviews = () => {
             scrollbar.el = scrollbarRef.current;
             swiper.params.spaceBetween = ['xl', '2xl', '3xl', '4xl'].includes(deviceType) ? 32 : 16
             swiper.allowTouchMove = deviceType === "md" || deviceType === "sm";
-            swiper.params.slidesPerView = deviceType === "sm" ? 1.4 : 2;
+            swiper.params.slidesPerView = deviceType === "sm" ? 1 : 3;
           }}
         >
           {reviewsData.map((item) => {
