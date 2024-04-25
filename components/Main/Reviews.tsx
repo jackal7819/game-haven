@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMedia } from "@/hooks/useMedia";
 import { reviewsData } from "@/reviewsData";
 import { GoChevronRight } from "react-icons/go";
@@ -10,18 +10,40 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper/modules";
 import { NavigationOptions, ScrollbarOptions } from "swiper/types";
 import { register } from "swiper/element/bundle";
+import type { Swiper as ISwiper } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
+import { any } from "prop-types";
 
 register();
 
 const Reviews = () => {
+  const [swiper, setSwiper] = useState<ISwiper | null>(null);
   const { deviceType } = useMedia();
+  console.log(swiper);
+  console.log(deviceType);
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
   const scrollbarRef = useRef(null);
+
+  useEffect(() => {
+    setSwiperParams(swiper);
+  }, [deviceType]);
+
+  function setSwiperParams(swiper: any) {
+    if (swiper) {
+      swiper.params.spaceBetween = ["xl", "2xl", "3xl", "4xl"].includes(
+        deviceType,
+      )
+        ? 24
+        : 16;
+      swiper.allowTouchMove = deviceType === "md" || deviceType === "sm";
+      swiper.params.slidesPerView =
+        deviceType === "4xl" ? 3 : deviceType === "sm" ? 1 : 2;
+    }
+  }
 
   const btnStyles =
     "rounded-[32px] p-3 w-14 h-14 bg-orange disabled:border disabled:border-orange disabled:bg-transparent disabled:text-orange";
@@ -59,8 +81,9 @@ const Reviews = () => {
           observer={true}
           className="mb-12 "
           modules={[Scrollbar, Navigation]}
-          spaceBetween={32}
-          slidesPerView={2}
+          spaceBetween={24}
+          slidesPerView={3}
+          onSwiper={setSwiper}
           navigation={{
             prevEl: navPrevRef.current,
             nextEl: navNextRef.current,
@@ -70,14 +93,6 @@ const Reviews = () => {
             draggable: true,
             dragClass: "swiper-scrollbar-drag !bg-light-blue !rounded",
           }}
-          onSwiper={(swiper) => {
-            console.log(swiper);
-          }}
-          onResize={(swiper) => {
-            swiper.params.spaceBetween = ['xl', '2xl', '3xl', '4xl'].includes(deviceType) ? 32 : 16
-            swiper.allowTouchMove = deviceType === "md" || deviceType === "sm";
-            swiper.params.slidesPerView = deviceType === "sm" ? 1 : 3;
-          }}
           allowTouchMove={false}
           onBeforeInit={(swiper) => {
             const navigation = swiper.params.navigation as NavigationOptions;
@@ -85,9 +100,6 @@ const Reviews = () => {
             navigation.prevEl = navPrevRef.current;
             navigation.nextEl = navNextRef.current;
             scrollbar.el = scrollbarRef.current;
-            swiper.params.spaceBetween = ['xl', '2xl', '3xl', '4xl'].includes(deviceType) ? 32 : 16
-            swiper.allowTouchMove = deviceType === "md" || deviceType === "sm";
-            swiper.params.slidesPerView = deviceType === "sm" ? 1 : 3;
           }}
         >
           {reviewsData.map((item) => {
