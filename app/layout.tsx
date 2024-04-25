@@ -2,9 +2,8 @@ import './globals.css';
 
 import Footer from '@/components/Layout/Footer/Footer';
 import Header from '@/components/Layout/Header/Header';
-import {Orbitron, Montserrat, Roboto} from 'next/font/google';
 import type { Metadata } from 'next';
-
+import {Montserrat, Orbitron, Roboto} from 'next/font/google';
 
 const orbitron = Orbitron({
   variable: '--font-orbitron',
@@ -39,7 +38,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en' className={`${orbitron.variable} ${roboto.variable} ${montserrat.variable}`}>
-			<body className={`${montserrat.className} bg-linear-dark-blue min-h-screen text-light`}>
+			<body className={`${montserrat.className} bg-linear-dark-blue min-h-screen text-light flex flex-col`}>
 				<Header />
 				<main>{children}</main>
 				<Footer />
