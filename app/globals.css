@@ -8,8 +8,6 @@
 	}
 }
 .profile {
-	margin-left: calc((100% - 328px) / 2);
-	width: calc(((100% - 328px) / 2) + 328px);
 	scrollbar-width: auto;
 	scrollbar-color: #00b8ff #f1fbff;
 }
