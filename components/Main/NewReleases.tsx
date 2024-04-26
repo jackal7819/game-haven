@@ -1,9 +1,12 @@
+'use client';
 import Link from 'next/link';
 import { GoChevronRight } from 'react-icons/go';
 import { games } from '@/data';
 import CardGame from './CardGame';
 
 const NewReleases: React.FC = () => {
+	const innerWidth = window.innerWidth;
+	const visible = innerWidth >= 1920 ? 8 : 6;
 	return (
 		<div className='mb-20 md:container'>
 			<div className='container flex items-center justify-between gap-5 mb-14'>
@@ -34,7 +37,7 @@ const NewReleases: React.FC = () => {
 			</div>
 			{/* DESKTOP CARDS */}
 			<div className='hidden grid-cols-1 gap-4 md:grid md:grid-cols-2 xl:grid-cols-3 4xl:gap-7 xl:gap-5 2xl:gap-6 4xl:grid-cols-4'>
-				{games.map((game) => (
+				{games.slice(0, visible).map((game) => (
 					<CardGame key={game.id} game={game} />
 				))}
 			</div>

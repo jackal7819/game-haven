@@ -6,7 +6,8 @@ export const games = [
 		price: '50,00',
 		rating: 5,
 		image: '/punk.jpg',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus. . Maecenas quis ligula eu ante egestas dapibus."
+		description:
+			'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary wrapped up in a do-or-die fight for survival. Improved and featuring all-new free additional content, customize your character and playstyle as you take on jobs, build a reputation, and unlock upgrades. The relationships you forge and the choices you make will shape the story and the world around you. Legends are made here. What will yours be?',
 	},
 	{
 		id: 2,
@@ -15,9 +16,9 @@ export const games = [
 		price: '55,00',
 		rating: 4,
 		image: '/tekken.jpg',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus."
-
-  },
+		description:
+			'Completely redesigned character visuals. Elaborate, highly-detailed models built from the ground and high-fidelity graphics break the limits of new-generation hardware by adding a new weight and atmosphere to TEKKEN’s signature battles. Vivid environments and destructible stages combine to create an overwhelming sense of immersion, creating the ultimate play experience.',
+	},
 	{
 		id: 3,
 		title: 'Last Epoch',
@@ -25,9 +26,9 @@ export const games = [
 		price: '45,00',
 		rating: 5,
 		image: '/epoch.jpg',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus."
-
-  },
+		description:
+			'Last Epoch combines time travel, exciting dungeon crawling, engrossing character customization and endless replayability to create an Action RPG for veterans and newcomers alike. Travel through the world of Eterra’s past and face dark empires, wrathful gods and untouched wilds – to find a way to save time itself from The Void.',
+	},
 	{
 		id: 4,
 		title: 'Elden Ring',
@@ -35,9 +36,9 @@ export const games = [
 		price: '35,00',
 		rating: 3,
 		image: '/elden.jpg',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus."
-
-  },
+		description:
+			'THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.',
+	},
 	{
 		id: 5,
 		title: 'Red Dead Redemption 2',
@@ -45,9 +46,9 @@ export const games = [
 		price: '29,00',
 		rating: 4,
 		image: '/rdr.jpg',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus."
-
-  },
+		description:
+			'Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age. Also includes access to the shared living world of Red Dead Online.',
+	},
 	{
 		id: 6,
 		title: 'Grand Theft Auto V: Premium Online Edition',
@@ -55,7 +56,27 @@ export const games = [
 		price: '60,00',
 		rating: 5,
 		image: '/gta.jpg',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit sit amet velit sed vehicula. Maecenas quis ligula eu ante egestas dapibus."
-
-  },
+		description:
+			'The Grand Theft Auto V: Premium Edition includes the complete Grand Theft Auto V story experience, free access to the ever evolving Grand Theft Auto Online and all existing gameplay upgrades and content including The Cayo Perico Heist, The Diamond Casino & Resort, The Diamond Casino Heist, Gunrunning and much more. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in Grand Theft Auto Online.',
+	},
+	{
+		id: 7,
+		title: 'Cyberpunk 2077: Ultimate Edition',
+		date: 'February 2024',
+		price: '50,00',
+		rating: 5,
+		image: '/punk.jpg',
+		description:
+			'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary wrapped up in a do-or-die fight for survival. Improved and featuring all-new free additional content, customize your character and playstyle as you take on jobs, build a reputation, and unlock upgrades. The relationships you forge and the choices you make will shape the story and the world around you. Legends are made here. What will yours be?',
+	},
+	{
+		id: 8,
+		title: 'Red Dead Redemption 2',
+		date: 'January 2022',
+		price: '29,00',
+		rating: 4,
+		image: '/rdr.jpg',
+		description:
+			'Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age. Also includes access to the shared living world of Red Dead Online.',
+	},
 ];
