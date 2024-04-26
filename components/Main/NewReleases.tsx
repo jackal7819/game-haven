@@ -33,16 +33,18 @@ const NewReleases: React.FC = () => {
 				</Link>
 			</div>
 			{/* DESKTOP CARDS */}
-			<div className='hidden grid-cols-1 gap-4 md:grid md:grid-cols-2 xl:grid-cols-3 4xl:gap-7 xl:gap-5 2xl:gap-6'>
+			<div className='hidden grid-cols-1 gap-4 md:grid md:grid-cols-2 xl:grid-cols-3 4xl:gap-7 xl:gap-5 2xl:gap-6 4xl:grid-cols-4'>
 				{games.map((game) => (
 					<CardGame key={game.id} game={game} />
 				))}
 			</div>
 			{/* MOBILE CARDS */}
-			<div className='space-x-4 carousel carousel-start rounded-box md:hidden profile'>
-				{games.map((game) => (
-					<CardGame key={game.id} game={game} />
-				))}
+			<div className='mx-4 md:hidden'>
+				<div className='w-full gap-1 p-px pb-8 carousel rounded-box md:hidden profile'>
+					{games.map((game) => (
+						<CardGame key={game.id} game={game} />
+					))}
+				</div>
 			</div>
 		</div>
 	);
