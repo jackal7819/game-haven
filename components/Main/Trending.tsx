@@ -3,10 +3,11 @@ import { games } from '@/data';
 import CardGame from './CardGame';
 import SeeMore from '../Layout/Button/SeeMore';
 import SeeMoreMobile from '../Layout/Button/SeeMoreMobile';
+import { useMedia } from '@/hooks/useMedia';
 
 const Trending: React.FC = () => {
-	const innerWidth = window.innerWidth;
-	const visible = innerWidth >= 1920 ? 8 : 6;
+	const { deviceType } = useMedia();
+	const visible = deviceType === '4xl' ? 8 : 6;
 	return (
 		<div className='mb-20 md:container'>
 			<div className='container flex items-center justify-between gap-5 mb-14'>
