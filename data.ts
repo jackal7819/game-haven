@@ -1,3 +1,7 @@
+export const pagination = ['<', '1', '2', '3', '...', 30, '>'];
+
+export const filters = ['Action', 'RPG', 'Racing', 'Adventure'];
+
 export const games = [
 	{
 		id: 1,
@@ -78,5 +82,45 @@ export const games = [
 		image: '/rdr.jpg',
 		description:
 			'Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age. Also includes access to the shared living world of Red Dead Online.',
+	},
+	{
+		id: 9,
+		title: 'Cyberpunk 2077: Ultimate Edition',
+		date: 'February 2024',
+		price: '50,00',
+		rating: 5,
+		image: '/punk.jpg',
+		description:
+			'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary wrapped up in a do-or-die fight for survival. Improved and featuring all-new free additional content, customize your character and playstyle as you take on jobs, build a reputation, and unlock upgrades. The relationships you forge and the choices you make will shape the story and the world around you. Legends are made here. What will yours be?',
+	},
+	{
+		id: 10,
+		title: 'Tekken 8',
+		date: 'July 2024',
+		price: '55,00',
+		rating: 4,
+		image: '/tekken.jpg',
+		description:
+			'Completely redesigned character visuals. Elaborate, highly-detailed models built from the ground and high-fidelity graphics break the limits of new-generation hardware by adding a new weight and atmosphere to TEKKEN’s signature battles. Vivid environments and destructible stages combine to create an overwhelming sense of immersion, creating the ultimate play experience.',
+	},
+	{
+		id: 11,
+		title: 'Last Epoch',
+		date: 'December 2024',
+		price: '45,00',
+		rating: 5,
+		image: '/epoch.jpg',
+		description:
+			'Last Epoch combines time travel, exciting dungeon crawling, engrossing character customization and endless replayability to create an Action RPG for veterans and newcomers alike. Travel through the world of Eterra’s past and face dark empires, wrathful gods and untouched wilds – to find a way to save time itself from The Void.',
+	},
+	{
+		id: 12,
+		title: 'Elden Ring',
+		date: 'June 2024',
+		price: '35,00',
+		rating: 3,
+		image: '/elden.jpg',
+		description:
+			'THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.',
 	},
 ];
