@@ -1,15 +1,15 @@
 'use client';
-import Filters from '@/components/Catalog/Filters';
 import GamesCatalog from '@/components/Catalog/GamesCatalog';
 import Pagination from '@/components/Catalog/Pagination';
 import { CiFilter, CiHome, CiSliderHorizontal } from 'react-icons/ci';
 import { HiOutlineXCircle } from 'react-icons/hi2';
-import { filters } from '@/data';
 import { useState } from 'react';
+import Filter from "@/components/common/FilterForm/Filter";
+import {useFilterStore} from "@/hooks/useFilter";
 
 const Catalog = () => {
 	const [isVisible, setIsVisible] = useState(false);
-
+  const {filters} = useFilterStore()
 	const handleVisible = () => {
 		setIsVisible(!isVisible);
 	};
@@ -51,7 +51,7 @@ const Catalog = () => {
 				))}
 			</div>
 			<div className='flex items-stretch gap-3'>
-				{isVisible && <Filters />}
+				{isVisible && <Filter onClose={handleVisible} />}
 				<div>
 					<GamesCatalog isVisible={isVisible} />
 					<Pagination />

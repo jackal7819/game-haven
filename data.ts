@@ -1,7 +1,5 @@
 export const pagination = ['<', '1', '2', '3', '...', 30, '>'];
 
-export const filters = ['Action', 'RPG', 'Racing', 'Adventure'];
-
 export const games = [
 	{
 		id: 1,
@@ -124,3 +122,43 @@ export const games = [
 			'THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.',
 	},
 ];
+
+
+export const filter = {
+  top: [
+    { label: "Trendings", value: "trendings" },
+    { label: "Bestsellers", value: "bestsellers" },
+    { label: "New releases", value: "new releases" },
+    { label: "Pre-ordering", value: "pre-ordering" },
+    { label: "Upcoming", value: "upcoming" },
+    { label: "Sales", value: "sales" }
+  ],
+  genres: [
+    { label: "Action", value: "action" },
+    { label: "Adventure", value: "adventure" },
+    { label: "Arcade", value: "arcade" },
+    { label: "Beat'em all", value: "beat" },
+    { label: "Cloud Gaming", value: "cloud gaming" },
+    { label: "Coaching", value: "coaching" },
+    { label: "Action", value: "action" },
+    { label: "Adventure", value: "adventure" },
+    { label: "Arcade", value: "arcade" },
+    { label: "Beat'em all", value: "beat" },
+    { label: "Cloud Gaming", value: "cloud gaming" },
+  ],
+  systems: [
+    { label: "PC", value: "pc" },
+    { label: "Mac", value: "mac" },
+    { label: "Linux", value: "linux" },
+    { label: "Play station 4", value: "ps4" },
+    { label: "Play station 5", value: "ps5" },
+   ],
+  platforms: [
+    { label: "Battle.net", value: "battle" },
+    { label: "Epic Games", value: "epic games" },
+    { label: "GOG.com", value: "gog" },
+    { label: "Instant Gaming", value: "instant gaming" },
+    { label: "Microsoft store", value: "microsoft store" },
+    { label: "NCsoft", value: "ncsoft" },
+  ],
+}

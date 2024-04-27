@@ -18,8 +18,12 @@ const config: Config = {
 			'4xl': '1920px',
 		},
 		extend: {
+      transitionProperty: {
+        'height': 'max-height, opacity, height',
+      },
       boxShadow: {
         heroButton: '1px 4px 64px 0px rgb(6 182 212 / 0.5)',
+        filter: '0px 4px 16px 0px rgba(0, 0, 0, 0.25);'
       },
 			backgroundImage: {
 				'linear-dark-blue':
@@ -30,6 +34,7 @@ const config: Config = {
 					'linear-gradient(180deg, #DB5B32 0%, #FFC7B6 100%)',
 				'linear-blur':
 					'linear-gradient(225.34deg, #1f1559cc 4.417%, #030035cc 47.993%, #1f1559cc 89.861%);',
+        'bg-menu': 'linear-gradient(225.34deg, rgba(31, 21, 89, 0.6) -0.648%,rgba(3, 0, 53, 0.6) 42.567%,rgba(31, 21, 89, 0.6) 84.088%)'
 			},
 			colors: {
 				'dark-blue': '#050021',
