@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { CiHeart, CiShoppingCart } from 'react-icons/ci';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 
@@ -17,7 +18,10 @@ interface CardGameProps {
 
 const CardGame: React.FC<CardGameProps> = ({ game }) => {
 	return (
-		<div className='xl:max-w-[514px] 3xl:h-[393px] flex flex-col gap-2 hover:shadow-xl md:hover:shadow-[0_4px_32px_0_#d3e2ff4c] rounded-xl duration-500 md:hover:-translate-y-3 cursor-pointer carousel-item w-full relative md:max-w-[336px] lg:max-w-[424px] border border-slate-600 4xl:h-[347px]'>
+		<Link
+			href={`/catalog/${game.id}`}
+			className='xl:max-w-[514px] 3xl:h-[393px] flex flex-col gap-2 hover:shadow-xl md:hover:shadow-[0_4px_32px_0_#d3e2ff4c] rounded-xl duration-500 md:hover:-translate-y-3 cursor-pointer carousel-item w-full relative md:max-w-[336px] lg:max-w-[424px] border border-slate-600 4xl:h-[347px]'
+		>
 			<div className='flex-1 rounded-xl'>
 				<Image
 					className='object-cover h-[242px] rounded-xl md:h-[218px] 3xl:h-[261px] 4xl:h-[215px]'
@@ -50,7 +54,9 @@ const CardGame: React.FC<CardGameProps> = ({ game }) => {
 					<p className='text-2xl'>{game.price} €</p>
 				</div>
 				<div className='flex items-center justify-center flex-1 w-full md:justify-between'>
-					<h2 className='flex-1 text-xl xl:text-2xl line-clamp-2'>{game.title}</h2>
+					<h2 className='flex-1 text-xl xl:text-2xl line-clamp-2'>
+						{game.title}
+					</h2>
 					<div className='absolute top-0 flex items-center justify-center p-3 right-10 md:relative md:right-0'>
 						<CiHeart size={27} />
 					</div>
@@ -59,7 +65,7 @@ const CardGame: React.FC<CardGameProps> = ({ game }) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 };
 
