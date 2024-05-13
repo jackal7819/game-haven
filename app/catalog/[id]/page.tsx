@@ -3,13 +3,16 @@
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 
+import Bestsellers from '@/components/Main/Bestsellers';
 import Image from 'next/image';
+import New from '@/components/News/New';
 import Reviews from '@/components/Main/Reviews';
 import SeeMore from '@/components/Layout/Button/SeeMore';
 import { CiHeart, CiHome } from 'react-icons/ci';
 import { Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { games } from '@/data';
+import { newsData } from '@/newsData';
 import { useRef } from 'react';
 
 const GameCardPage = ({ params }: { params: { id: string } }) => {
@@ -18,6 +21,7 @@ const GameCardPage = ({ params }: { params: { id: string } }) => {
 	const scrollbarRef = useRef(null);
 	return (
 		<div className='container pt-10 pb-20'>
+			{/* BREADCRUMBS */}
 			<div className='flex items-center gap-3 mb-10'>
 				<CiHome size={24} />
 				<p className='text-blue'>&gt;</p>
@@ -27,10 +31,11 @@ const GameCardPage = ({ params }: { params: { id: string } }) => {
 				<p className='text-blue'>&gt;</p>
 				<p className='font-orbitron text-orange'>{game?.title}</p>
 			</div>
-			<section className='flex justify-center gap-6 mb-10'>
+			{/* GAME CARD */}
+			<section className='flex justify-center gap-6'>
 				<div>
 					<Image
-						className='object-cover w-[420px] h-[236px] rounded-xl'
+						className='object-cover w-[420px] h-[236px] rounded-xl 4xl:w-[788px] 2xl:h-[466px]'
 						src={game?.image ? game.image : '/tekken.jpg'}
 						alt={game?.title || 'Default Image'}
 						width={420}
@@ -79,7 +84,8 @@ const GameCardPage = ({ params }: { params: { id: string } }) => {
 					</div>
 				</div>
 			</section>
-			<section className='flex justify-between py-20 gap-14'>
+			{/* ABOUT */}
+			<section className='flex justify-between py-10 gap-14'>
 				<div className='flex flex-col justify-between w-1/2 gap-4'>
 					<h2 className='text-[32px] font-orbitron font-medium'>
 						About
@@ -125,12 +131,13 @@ const GameCardPage = ({ params }: { params: { id: string } }) => {
 					</div>
 				</div>
 			</section>
-			<section className='py-20'>
+			{/* VISUALS */}
+			<section className='py-10'>
 				<h2 className='text-[32px] font-orbitron font-medium mb-10'>
 					Visuals
 				</h2>
 				<Swiper
-					slidesPerView={2}
+					slidesPerView={3}
 					spaceBetween={24}
 					centeredSlides={true}
 					scrollbar={{
@@ -147,8 +154,8 @@ const GameCardPage = ({ params }: { params: { id: string } }) => {
 							<Image
 								src={game.image}
 								alt='Screenshot'
-								width={420}
-								height={236}
+								width={592}
+								height={333}
 								className='rounded-xl'
 							/>
 						</SwiperSlide>
@@ -159,7 +166,8 @@ const GameCardPage = ({ params }: { params: { id: string } }) => {
 					className='container w-auto h-2 mt-5 rounded md:w-3/5 lg:w-2/5 xl:w-1/3 2xl:w-1/4 bg-light'
 				></div>
 			</section>
-			<section className='py-20'>
+			{/* CONFIGURATION */}
+			<section className='py-10'>
 				<h2 className='text-[32px] font-orbitron font-medium mb-10'>
 					Configuration
 				</h2>
@@ -180,7 +188,10 @@ const GameCardPage = ({ params }: { params: { id: string } }) => {
 						</div>
 						<div className='flex gap-[114px]'>
 							<p>Graphics:</p>
-							<p>Ge Force GTX 1060 6GB or Radeon RX 580 8 GB or Arc A380</p>
+							<p>
+								Ge Force GTX 1060 6GB or Radeon RX 580 8 GB or
+								Arc A380
+							</p>
 						</div>
 						<div className='flex gap-[124px]'>
 							<p>DirectX:</p>
@@ -211,7 +222,10 @@ const GameCardPage = ({ params }: { params: { id: string } }) => {
 						</div>
 						<div className='flex gap-[114px]'>
 							<p>Graphics:</p>
-							<p>Ge Force GTX 1060 6GB or Radeon RX 580 8 GB or Arc A380</p>
+							<p>
+								Ge Force GTX 1060 6GB or Radeon RX 580 8 GB or
+								Arc A380
+							</p>
 						</div>
 						<div className='flex gap-[124px]'>
 							<p>DirectX:</p>
@@ -228,7 +242,19 @@ const GameCardPage = ({ params }: { params: { id: string } }) => {
 					</div>
 				</div>
 			</section>
+			{/* REVIEWS */}
 			<Reviews />
+			<div className='flex justify-center mb-20 -mt-20'>
+				<button className='w-[386px] text-center px-9 py-4 bg-orange rounded-2xl duration-500 hover:bg-amber-500 text-2xl'>
+					Leave review
+				</button>
+			</div>
+			{/* GAME'S NEWS */}
+			{newsData.slice(0, 3).map((item) => (
+				<New key={item.id} item={item} />
+			))}
+			{/* ALSO LIKE */}
+			<Bestsellers />
 		</div>
 	);
 };
