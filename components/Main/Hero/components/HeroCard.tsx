@@ -10,12 +10,9 @@ interface HeroCardProps {
   title: string
   description: string
   price: string
-  totalSlides: number,
-  activeIndex: number,
-  onBulletClick: (index: number) => void,
 }
 
-const HeroCard: FC<HeroCardProps> = ({totalSlides, activeIndex, onBulletClick, image, title, description, price}) => {
+const HeroCard: FC<HeroCardProps> = ({image, title, description, price}) => {
   return (
     <div
       className="relative heroCard w-full p-[40px_16px] bg-cover bg-right md:p-10 lg:p-0 lg:h-[491px] lg:flex lg:justify-center xl:h-[506px] 2xl:h-[570px] 3xl:h-[665px] 4xl:h-[760px]"
@@ -48,18 +45,13 @@ const HeroCard: FC<HeroCardProps> = ({totalSlides, activeIndex, onBulletClick, i
               3xl:w-[548px] 3xl:line-clamp-3 3xl:h-[75px] 3xl:mb-10
               4xl:w-[648px]'>{description}</p>
             <p className='mb-8 text-center font-montserrat text-[24px] leading-[100%] 3xl:mb-10'>{price} €</p>
-            <Link href='/'>
-              <div className='mb-[55px] h-[56px] flex justify-center items-center rounded-2xl bg-orange text-[24px] font-montserrat hover:shadow-heroButton
-          hover:shadow-cyan-500/50 md:w-[263px] md:mb-[36px] lg:w-[283px]'>Buy
-              </div>
+            <Link href='/' className='z-[999] mb-[55px] h-[56px] flex justify-center items-center rounded-2xl bg-orange text-[24px] font-montserrat hover:shadow-heroButton
+          hover:shadow-cyan-500/50 md:w-[263px] md:mb-[36px] lg:w-[283px]'>
+              Buy
             </Link>
           </div>
 
         </div>
-        <CustomPagination
-          totalSlides={totalSlides}
-          activeIndex={activeIndex}
-          onBulletClick={onBulletClick}/>
       </div>
     </div>
   )

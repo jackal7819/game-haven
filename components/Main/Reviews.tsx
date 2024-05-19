@@ -21,8 +21,7 @@ register();
 const Reviews = () => {
   const [swiper, setSwiper] = useState<ISwiper | null>(null);
   const { deviceType } = useMedia();
-  console.log(swiper);
-  console.log(deviceType);
+
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
   const scrollbarRef = useRef(null);
