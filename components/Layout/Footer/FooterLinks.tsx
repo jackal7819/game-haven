@@ -11,8 +11,6 @@ interface FooterLinksProps {
   links: Link[]
 }
 
-
-
 const FooterLinks = ({title, links}:FooterLinksProps) => {
   return (
     <div className="flex flex-col items-start gap-10 lg:min-w-[178px]">

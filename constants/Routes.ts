@@ -4,20 +4,21 @@ export const ROUTES = {
 	support: '/support',
 	basket: '/basket',
 	favorites: '/favorites',
+  privacyPolicy: '/privacy-policy',
+  faq: '/faq',
+  contactUs: 'contact-us',
 	footerLinks: {
 		catalogues: [
 			{ path: '/', name: 'PC' },
 			{ path: '/', name: 'PlayStation' },
 			{ path: '/', name: 'XBox' },
 			{ path: '/', name: 'Nintendo' },
-			{ path: '/', name: 'Giftcards' },
 		],
 		resources: [
-			{ path: '/', name: 'Term of Use' },
-			{ path: '/', name: 'Privacy Policy' },
-			{ path: '/', name: 'Support 24/7' },
-			{ path: '/', name: 'FAQ' },
-			{ path: '/', name: 'News' },
+			{ path: '/term-of-use', name: 'Terms of Use' },
+			{ path: '/privacy-policy', name: 'Privacy Policy' },
+			{ path: '/faq', name: 'FAQ' },
+			{ path: '/news', name: 'News' },
 		],
 	},
 
