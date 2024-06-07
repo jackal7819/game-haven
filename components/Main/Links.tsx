@@ -50,7 +50,7 @@ const Links = () => {
         </Link>
       </div>
       <Link
-        href="/"
+        href={`/news`}
         className={`py-10 flex-[1_1_28%] xl:flex-[1_1_30%] flex justify-center items-center relative ${gradientClasses} ${textClasses}`}
       >
         News
