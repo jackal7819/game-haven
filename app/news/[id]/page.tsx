@@ -22,9 +22,10 @@ const NewsCardPage = ({ params }: { params: { id: string } }) => {
   const scrollbarRef = useRef(null);
   const { id } = params;
   const newsCard = newsData.find((e) => e.id === +id);
+  // @ts-ignore
   const alsoLike = [];
   newsData.map((e) => {
-    if (alsoLike.length < 3 && e.id !== newsCard.id) {
+    if (alsoLike.length < 3 && e.id !== newsCard?.id) {
       alsoLike.push(e);
     }
   });
@@ -134,6 +135,7 @@ const NewsCardPage = ({ params }: { params: { id: string } }) => {
         />
         <div className="container flex gap-2 md:gap-8 mb-20">
           {newsCard?.reactions.map((item) => {
+            // @ts-ignore
             const Reaction = Reactions[item.reaction];
             return (
               <div
@@ -167,9 +169,12 @@ const NewsCardPage = ({ params }: { params: { id: string } }) => {
           You probably also gonna like
         </h2>
         <div>
-          {alsoLike.map((item) => {
-            return <New key={item.id} item={item} />;
-          })}
+          {
+            //@ts-ignore
+            alsoLike.map((item) => {
+              return <New key={item.id} item={item} />;
+            })
+          }
         </div>
       </div>
     </>
