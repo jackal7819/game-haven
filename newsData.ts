@@ -18,6 +18,10 @@ export const newsData = [
       "/punk.jpg",
       "/elden.jpg",
     ],
+    reactions: [
+      { reaction: "CiFaceSmile", count: 3 },
+      { reaction: "CiHeart", count: 4 },
+    ],
   },
   {
     id: 2,
@@ -38,6 +42,7 @@ export const newsData = [
       "/punk.jpg",
       "/elden.jpg",
     ],
+    reactions: [],
   },
   {
     id: 3,
@@ -63,6 +68,10 @@ export const newsData = [
       "/punk.jpg",
       "/elden.jpg",
     ],
+    reactions: [
+      { reaction: "CiFaceSmile", count: 3 },
+      { reaction: "CiHeart", count: 4 },
+    ],
   },
   {
     id: 4,
@@ -82,6 +91,10 @@ export const newsData = [
       "/punk.jpg",
       "/punk.jpg",
       "/elden.jpg",
+    ],
+    reactions: [
+      { reaction: "CiFaceSmile", count: 3 },
+      { reaction: "CiHeart", count: 4 },
     ],
   },
   {
@@ -103,6 +116,10 @@ export const newsData = [
       "/punk.jpg",
       "/elden.jpg",
     ],
+    reactions: [
+      { reaction: "CiFaceSmile", count: 3 },
+      { reaction: "CiHeart", count: 4 },
+    ],
   },
   {
     id: 6,
@@ -122,6 +139,10 @@ export const newsData = [
       "/punk.jpg",
       "/punk.jpg",
       "/elden.jpg",
+    ],
+    reactions: [
+      { reaction: "CiFaceSmile", count: 3 },
+      { reaction: "CiHeart", count: 4 },
     ],
   },
   {
@@ -143,6 +164,10 @@ export const newsData = [
       "/punk.jpg",
       "/elden.jpg",
     ],
+    reactions: [
+      { reaction: "CiFaceSmile", count: 3 },
+      { reaction: "CiHeart", count: 4 },
+    ],
   },
   {
     id: 8,
@@ -163,6 +188,10 @@ export const newsData = [
       "/punk.jpg",
       "/elden.jpg",
     ],
+    reactions: [
+      { reaction: "CiFaceSmile", count: 3 },
+      { reaction: "CiHeart", count: 4 },
+    ],
   },
   {
     id: 9,
@@ -182,6 +211,10 @@ export const newsData = [
       "/punk.jpg",
       "/punk.jpg",
       "/elden.jpg",
+    ],
+    reactions: [
+      { reaction: "CiFaceSmile", count: 3 },
+      { reaction: "CiHeart", count: 4 },
     ],
   },
 ];
