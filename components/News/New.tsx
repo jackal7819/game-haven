@@ -46,7 +46,7 @@ const New: React.FC<NewItem> = ({ item }) => {
           </h3>
           <p className="line-clamp-4  xl:text-xl xl:leading-6">{item.text}</p>
           <Link
-            href="/"
+            href={`/news/${item.id}`}
             className="flex items-center justify-center border border-orange rounded-2xl px-6 py-4 w-48"
           >
             <span className="leading-4 md:leading-5 md:text-xl text-orange ">
@@ -55,7 +55,7 @@ const New: React.FC<NewItem> = ({ item }) => {
             <GoChevronRight
               size={24}
               className="mt-[3px] text-orange group-hover:text-light-blue"
-            />{" "}
+            />
           </Link>
         </div>
       </div>
